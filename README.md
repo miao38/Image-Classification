@@ -1,7 +1,7 @@
 # Image-Classification
 This program determines if your image is an airplane, car, bird, cat, deer, frog, horse, ship, or truck. I used CIFAR-10 to train the model which is included in the Keras module. First I had to convert the pixel values of the dataset to a float and then normalize it by dividing by 255. Next, I changed them to categorical types instead of continuous.  
 # Model
-I created a sequential model. The first layer had 32 filters. Next I included a dropout to prevent overfitting. Then I had another layer with 32 filters again. Finally I had another layer with 512 neurons with a dropout following that. I then ran the model through SGD to optimize it.  
+I created a sequential model with 2 convolusion layers. The first layer had 32 filters that are 3 by 3. Next I included a dropout of 20% to prevent overfitting. Then I had another convolusion layer with 32 filters that were 3 by 3 again. This time I pooled that layer using its max. Finally I flattened it to use in a dense layer with 512 neurons with a dropout of 50% following that. I then used SGD for gradient decent and categorical crossentropy to caculate the loss.  
 # Training
 I trained two models, one with 10 epochs and another with 25 epochs.  
 
